@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
     <style>
@@ -17,26 +17,13 @@
             margin: 0;
         }
         .clock {
+            max-width: 100%;
             display: flex;
-            flex-wrap: nowrap;
             justify-content: center;
-            align-items: center;
-            width: 100%;
-            max-width: 600px;
         }
         .flip-clock-wrapper {
-            display: flex;
             width: 100%;
-            justify-content: center;
-        }
-        .flip-clock-wrapper ul {
-            height: auto !important;
-        }
-        .flip-clock-wrapper ul li {
-            font-size: 2em;
-        }
-        .flip-clock-label {
-            display: none;
+            max-width: 600px;
         }
     </style>
 </head>
