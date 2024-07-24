@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        #countdown {
+            width: 300px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown" class="clock"></div>
+
+    <script>
+        var clock;
+
+        $(document).ready(function() {
+            var eventDate = new Date("July 25, 2024 20:00:00").getTime() / 1000;
+            var currentDate = new Date().getTime() / 1000;
+            var remainingSeconds = eventDate - currentDate;
+
+            clock = $('#countdown').FlipClock(remainingSeconds, {
+                clockFace: 'DailyCounter',
+                countdown: true,
+                showSeconds: true
+            });
+        });
+    </script>
+</body>
+</html>
